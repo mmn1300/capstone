@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Input Rows with Submission</title>
+    <style>
+        .input-row {
+            margin-bottom: 10px;
+        }
+        .input-row input {
+            margin-right: 10px;
+        }
+        .input-row button {
+            margin-right: 10px;
+        }
+        #addRow, #submitData {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="inputForm" method="POST" action="db_insert.php">
+        <div id="container">
+            <div class="input-row">
+                <input type="text" name="text[]" placeholder="Enter text">
+                <input type="number" name="number[]" value="0">
+                <button type="button" class="increment">+</button>
+                <button type="button" class="decrement">-</button>
+            </div>
+        </div>
+        <button type="button" id="addRow">추가</button>
+        <button type="submit" id="submitData">등록</button>
+    </form>
+
+    <script>
+        document.getElementById('addRow').addEventListener('click', function() {
+            const container = document.getElementById('container');
+            const newRow = document.createElement('div');
+            newRow.className = 'input-row';
+
+            const textInput = document.createElement('input');
+            textInput.type = 'text';
+            textInput.name = 'text[]';
+            textInput.placeholder = 'Enter text';
+            newRow.appendChild(textInput);
+
+            const numberInput = document.createElement('input');
+            numberInput.type = 'number';
+            numberInput.name = 'number[]';
+            numberInput.value = '0';
+            newRow.appendChild(numberInput);
+
+            const incrementButton = document.createElement('button');
+            incrementButton.type = 'button';
+            incrementButton.className = 'increment';
+            incrementButton.textContent = '+';
+            newRow.appendChild(incrementButton);
+
+            const decrementButton = document.createElement('button');
+            decrementButton.type = 'button';
+            decrementButton.className = 'decrement';
+            decrementButton.textContent = '-';
+            newRow.appendChild(decrementButton);
+
+            container.appendChild(newRow);
+
+            incrementButton.addEventListener('click', function() {
+                numberInput.value = parseInt(numberInput.value) + 1;
+            });
+
+            decrementButton.addEventListener('click', function() {
+                numberInput.value = parseInt(numberInput.value) - 1;
+            });
+        });
+
+        document.querySelectorAll('.increment').forEach(function(button) {
+            button.addEventListener('click', function() {
+                const numberInput = this.previousElementSibling;
+                numberInput.value = parseInt(numberInput.value) + 1;
+            });
+        });
+
+        document.querySelectorAll('.decrement').forEach(function(button) {
+            button.addEventListener('click', function() {
+                const numberInput = this.previousElementSibling.previousElementSibling;
+                numberInput.value = parseInt(numberInput.value) - 1;
+            });
+        });
+    </script>
+
+</body>
+</html>

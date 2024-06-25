@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 메뉴</title>
+</head>
+<body>
+    <button id="registerButton">재고 등록</button>
+    <button id="searchButton">재고 정보 출력</button>
+
+    <script>
+        document.getElementById('registerButton').addEventListener('click', function() {
+            window.location.href = 'fourth_page.html';
+        });
+
+        document.getElementById('searchButton').addEventListener('click', function() {
+            window.location.href = 'db_search.php';
+        });
+
+        // 캐시 무시를 위한 임시 조치
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                for (let registration of registrations) {
+                    registration.unregister();
+                }
+            }).catch(function(err) {
+                console.log('Service Worker registration failed: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
