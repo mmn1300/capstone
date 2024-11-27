@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales History</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/sales_history.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back_button_container">
+            <button id="home" class="back_button">홈</button>
+            <button id="backPage" class="back_button">←</button>
+        </div>
+
+        <div class="query_result">
+            <h1 id="date">{{ rows[0][0] }} 편의점 판매 내역</h1>
+            <hr/>
+            <br/>
+
+            {% if rows %}
+                <div class="row">
+                    <span class="cell">날짜</span>
+                    <span class="cell">상품 코드</span>
+                    <span class="cell">카테고리</span>
+                    <span class="cell">상품 명</span>
+                    <span class="cell">판매량</span>
+                </div>
+                <hr/>
+
+                {% for row in rows %}
+                    <div class="drow">
+                        <span class="dcell" column="date">{{ row[0] }}</span>
+                        <span class="dcell" column="code">{{ row[1] }}</span>
+                        <span class="dcell" column="category">{{ row[2] }}</span>
+                        <span class="dcell" column="name">{{ row[3] }}</span>
+                        <span class="dcell" column="sales_rate">{{ row[4] }}</span>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>데이터가 없습니다.</p>
+            {% endif %}
+        </div>
+        <div class="result-text">
+            <div class="cell2-container">
+                {% if place %}
+                    <span class="cell2">{{ place }} 지점</span>
+                {% else %}
+                    <span class="cell2">로그인 정보 없음</span>
+                {% endif %}
+            </div>
+            <br/>
+            <div class="cell1-container">
+                <span class="cell1" id="sales_rate">총 판매 수량 : 0 개</span>
+            </div>
+            <br/>
+            <div class="cell3-container">
+                {% if weatherInfo %}
+                    <span class="cell3">오늘 날씨 : {{ weatherInfo }}</span>
+                {% else %}
+                    <span class="cell3">오늘 날씨 : 데이터없음</span>
+                {% endif %}
+            </div>
+        </div>
+        <div class="calendar-container">
+            <div class="calendar-header">
+              <button id="prevBtn">이전</button>
+              <h2 id="currentMonth"></h2>
+              <button id="nextBtn">다음</button>
+            </div>
+            <div class="calendar-days">
+              <div class="day">일</div>
+              <div class="day">월</div>
+              <div class="day">화</div>
+              <div class="day">수</div>
+              <div class="day">목</div>
+              <div class="day">금</div>
+              <div class="day">토</div>
+            </div>
+            <div class="calendar-dates" id="calendarDates"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/static/js/sales_history_def.js"></script>
+    <script type="text/javascript" src="/static/js/sales_history.js"></script>
+    <script type="text/javascript" src="/static/js/sales_history_event.js"></script>
+</body>
+</html>

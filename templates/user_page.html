@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>판매 페이지</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/user_page.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 좌측 -->
+        <div class="left">
+            <div class="image-space">
+                <!-- 이미지가 들어갈 공간 -->
+                <img src="/static/img/noimage.png" id="recognized-item-image" alt="">
+            </div>
+            <div class="left-bottom">
+                <div class="left-bottom-element">
+                    <span class="left-bottom-span" id="recognized-item-category">카테고리</span>
+                </div>
+                <div class="left-bottom-element">
+                    <span class="left-bottom-span" id="recognized-item-name">제품 명</span>
+                </div>
+                <div class="left-bottom-element">
+                    <span class="left-bottom-span" id="recognized-item-price">가격</span>
+                </div>
+                <div class="left-bottom-element">
+                    <button class="left-bottom-button" id="add-item">장바구니에 추가</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 중앙 -->
+        <div class="center">
+            <span class="input-label">상품 목록</span>
+            <div id="input-group">
+            </div>
+        </div>
+
+        <!-- 우측 -->
+        <div class="right">
+            <div class="back_button_container">
+                <button id="home" class="back_button">홈</button>
+                <button id="backPage" class="back_button">관리자</button>
+            </div>
+            <div class="right-top">
+                <img src="video_feed" id="video">
+            </div>
+            <div class="right-bottom">
+                <div class="right-bottom-element">
+                    <button class="right-bottom-button" id="capture-image">스캔하기</button>
+                </div>
+                <div class="right-bottom-element">
+                    <span id="right-bottom-span">전체 0 개, 0 원</span>
+                </div>
+                <div class="right-bottom-element">
+                    <button class="right-bottom-button" id="payment">결제하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="soundEffect" src="static/sound/Beep_Short.mp3" preload="auto"></audio>
+    <script type="text/javascript" src="/static/js/user_page_def.js"></script>
+    <script type="text/javascript" src="/static/js/user_page_event.js"></script>
+</body>
+</html>

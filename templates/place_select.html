@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Select</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/place_select.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="back_button_container">
+            <button id="home" class="back_button">홈</button>
+        </div>
+
+        <div class="front_button_container">
+            <h1>지점을 선택해 주세요</h1>
+            <select id="place-select"></select>
+            <input id="user-ip-address" type="text" placeholder="IP주소를 입력해주세요">
+            <button id="select-btn">확인</button>
+        </div>
+    </div>
+    <script>
+        const placeList = JSON.parse(`{{ placeList | tojson | safe }}`);
+    </script>
+    <script type="text/javascript" src="/static/js/place_select_def.js"></script>
+    <script type="text/javascript" src="/static/js/place_select.js"></script>
+    <script type="text/javascript" src="/static/js/place_select_event.js"></script>
+</body>
+</html>

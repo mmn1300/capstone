@@ -1,0 +1,5 @@
+["2024-11-19", "2024-11-20", "2024-11-21", "2024-11-22", "2024-11-23", "2024-11-24", "2024-11-25", "2024-11-26"]
+[0, 0, 0, 0, 1, 1, 0, 0]
+["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday"]
+{"Monday": [0, 0, 0, 0, 0, 0, 1, 0], "Tuesday": [1, 0, 0, 0, 0, 0, 0, 1], "Wednesday": [0, 1, 0, 0, 0, 0, 0, 0], "Thursday": [0, 0, 1, 0, 0, 0, 0, 0], "Friday": [0, 0, 0, 1, 0, 0, 0, 0], "Saturday": [0, 0, 0, 0, 1, 0, 0, 0], "Sunday": [0, 0, 0, 0, 0, 1, 0, 0]}
+["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]

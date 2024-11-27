@@ -1,0 +1,55 @@
+{
+    "weatherLoad": true,
+    "todayWeatherInfo": "\ucda5\uace0 \uac00\ubcbc\uc6b4 \ub208\uc774 \ub0b4\ub9bc",
+    "inventoryQuantity": {
+        "snack": 0,
+        "ramen": 0,
+        "beer": 0,
+        "razor": 0,
+        "pad": 0,
+        "hangover_cure": 0,
+        "stockings": 0,
+        "icecream": 0,
+        "mask": 0,
+        "soda": 0,
+        "umbrella": 0,
+        "water": 0
+    },
+    "threeDaysPredictedSales": {
+        "snack": 0,
+        "ramen": 0,
+        "beer": 0,
+        "razor": 0,
+        "pad": 0,
+        "hangover_cure": 0,
+        "stockings": 0,
+        "icecream": 0,
+        "mask": 0,
+        "soda": 0,
+        "umbrella": 0,
+        "water": 0
+    },
+    "sevenDaysPredictedSales": {
+        "snack": 0,
+        "ramen": 0,
+        "beer": 0,
+        "razor": 0,
+        "pad": 0,
+        "hangover_cure": 0,
+        "stockings": 0,
+        "icecream": 0,
+        "mask": 0,
+        "soda": 0,
+        "umbrella": 0,
+        "water": 0
+    },
+    "categoryGruModelOperationStatus": {
+        "beer": true,
+        "icecream": true,
+        "mask": true,
+        "soda": true,
+        "umbrella": true,
+        "water": true,
+        "snack": true
+    }
+}

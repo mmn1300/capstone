@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Menu</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/admin_page.css">
+</head>
+<body>
+    <div class="container">
+        <div class="user-info-container">
+            <span id="login-info">로그인되지 않음</span>
+        </div>
+        <div class="back_button_container">
+            <button id="home" class="back_button">홈</button>
+            <button id="backPage" class="back_button">←</button>
+        </div>
+
+        <div class="front_button_container">
+            <div class="top_front_button">
+                <button id="inventoryInfo" class="front_button">재고 물품<br/> 등록 및 정보</button>
+                <button id="demandForecasting" class="front_button">수요 예측</button>
+            </div>
+            <div class="bottom_front_button">
+                <button id="salesHistory" class="front_button">판매 내역</button>
+                <button id="orderPage" class="front_button">발주서 작성</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const username = JSON.parse(`{{ username | tojson | safe }}`);
+        const place = JSON.parse(`{{ place | tojson | safe }}`);
+    </script>
+    <script type="text/javascript" src="/static/js/admin_page.js"></script>
+    <script type="text/javascript" src="/static/js/admin_page_event.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory infomation</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/inventory_info.css">
+</head>
+<body>
+    <div class="container">
+        <div class="user-info-container">
+            <span id="login-info">로그인되지 않음</span>
+        </div>
+        <div class="back_button_container">
+            <button id="home" class="back_button">홈</button>
+            <button id="backPage" class="back_button">←</button>
+        </div>
+
+        <div class="front_button_container">
+            <button id="registerButton" class="front_button">재고 등록</button>
+            <button id="searchButton" class="front_button">재고 정보 출력</button>
+    </div>
+    <script>
+        const username = JSON.parse(`{{ username | tojson | safe }}`);
+        const place = JSON.parse(`{{ place | tojson | safe }}`);
+    </script>
+    <script type="text/javascript" src="/static/js/inventory_info.js"></script>
+    <script type="text/javascript" src="/static/js/inventory_info_event.js"></script>
+</body>
+</html>

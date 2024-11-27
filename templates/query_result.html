@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Table Data</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/query_result.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back_button_container">
+            <button id="home" class="back_button">홈</button>
+            <button id="backPage" class="back_button">←</button>
+        </div>
+
+        <div class="query_result">
+            <h1>편의점 재고 정보</h1>
+            <div class="button-container">
+                <div class="category-button-container">
+                    <button id="all" class="category-btn">전체</button>
+                    <button id="food" class="category-btn">식품</button>
+                    <button id="drink" class="category-btn">음료</button>
+                    <button id="sanitary_products" class="category-btn">위생용품</button>
+                    <button id="etc" class="category-btn">기타</button>
+                </div>
+                <div class="predict-button-container">
+                    <button class="predict-btn" id="predict-btn-left">3일</button>
+                    <button class="predict-btn" id="predict-btn-right">7일</button>
+                </div>
+            </div>
+            <br/>
+
+            <div id="inventory">
+                {% if rows[0] %}
+                    <div class="info-row">
+                        <span class="icon-cell"></span>
+                        <span class="code-cell" id="code-cell-head">상품 코드</span>
+                        <span class="cell">카테고리</span>
+                        <span class="cell">상품 유형</span>
+                        <span class="cell">상품 명</span>
+                        <span class="cell">수량</span>
+                        <span class="cell-last">가격</span>
+                    </div>
+
+                    <!-- 아래 행 재고 개수만큼 생성 -->
+                    <!-- <div class="row">
+                        <span class="icon-cell-body"><img src="/static/img/bulb_icon_beer.png" class="icon-img" width="18px" height="18px"></span>
+                        <span class="code-cell">0</span>
+                        <span class="cell-body" cid="product-type-cell">식품</span>
+                        <span class="cell-body" cid="product-category-cell">라면</span>
+                        <span class="cell-body" cid="product-name-cell">삼양라면</span>
+                        <span class="cell-body"><input type="text" cid="product-quantity-cell" id="quantity" name="quantity[]" value="100"></span>
+                        <span class="cell-body"><input type="text" cid="product-price-cell" id="price" name="price[]" value="1000">원</span>
+                        <button type="button">x</button>
+                    </div> -->
+
+                {% else %}
+                    <p>데이터가 없습니다.</p>
+                {% endif %}
+            </div>
+            <div class="page-info">
+                <button class="page-button" id="previous-page-btn">&lt;</button>
+                <input id="page-number" type="number" value="1">
+                <button class="page-button" id="next-page-btn">&gt;</button>
+            </div>
+            <div class="update-item">
+                <button class="update-item-button">변경하기</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const queryData = JSON.parse(`{{ rows | tojson | safe }}`);
+        const category = JSON.parse(`{{ category | tojson | safe }}`);
+        const sumOfCategoryQuantity = JSON.parse(`{{ sumOfCategoryQuantity | tojson | safe }}`);
+        const sumOfThreeDaysPredictSales = JSON.parse(`{{ sumOfThreeDaysPredictSales | tojson | safe }}`);
+        const sumOfSevenDaysPredictSales = JSON.parse(`{{ sumOfSevenDaysPredictSales | tojson | safe }}`);
+    </script>
+    <script type="text/javascript" src="/static/js/query_result_def.js"></script>
+    <script type="text/javascript" src="/static/js/query_result.js"></script>
+    <script type="text/javascript" src="/static/js/query_result_event.js"></script>
+</body>
+</html>

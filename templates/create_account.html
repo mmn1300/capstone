@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/create_account.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sign-up-container">
+            <div class="create-account-container">
+                <table id="table1">
+                    <thead>
+                        <tr>
+                            <th width="3%"></th>
+                            <th width="77%"></th>
+                            <th width="20%"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="icon-cell-body"><img src="/static/img/unchecked.png" class="icon-img" width="18px" height="18px"></span></td>
+                            <td><input type="text" id="id" class="check-input" placeholder="아이디"></td>
+                            <td><button id="id-redundancy-check">중복 확인</button></td>
+                        </tr>
+                        <tr>
+                            <td><span class="icon-cell-body"><img src="/static/img/unchecked.png" class="icon-img" width="18px" height="18px"></span></td>
+                            <td colspan="2"><input class="input" type="password" id="pw" placeholder="비밀번호"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="icon-cell-body"><img src="/static/img/unchecked.png" class="icon-img" width="18px" height="18px"></span></td>
+                            <td colspan="2"><input class="input" type="password" id="pw-check" placeholder="비밀번호 확인"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" id="text-td"><h5 id="pw-check-text" class="highlight-black">비밀번호를 입력해주세요</h5></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table id="table2">
+                    <thead>
+                        <tr>
+                            <th width="3%"></th>
+                            <th width="77%"></th>
+                            <th width="20%"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="icon-cell-body"><img src="/static/img/unchecked.png" class="icon-img" width="18px" height="18px"></span></td>
+                            <td><input class="check-input" type="text" id="nickname" placeholder="닉네임"><br/></td>
+                            <td><button id="name-redundancy-check">중복 확인</button></td>
+                        </tr>
+                        <tr>
+                            <td><span class="icon-cell-body"><img src="/static/img/unchecked.png" class="icon-img" width="18px" height="18px"></span></td>
+                            <td><input class="check-input" type="text" id="place" placeholder="지점명"><br/></td>
+                            <td><button id="place-redundancy-check">중복 확인</button></td>
+                        </tr>
+                        <tr>
+                            <td><span class="icon-cell-body"><img src="/static/img/unchecked.png" class="icon-img" width="18px" height="18px"></span></td>
+                            <td><input class="check-input" type="password" id="approval-code" placeholder="승인코드"><br/></td>
+                            <td><button id="approval-code-check">일치 확인</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="button-container">
+                <button type="button" id="sign-up">회원가입</button>
+                <button type="button" id="back-page">이전 페이지</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/static/js/create_account_def.js"></script>
+    <script type="text/javascript" src="/static/js/create_account_event.js"></script>
+</body>
+</html>

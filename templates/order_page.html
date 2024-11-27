@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/order_page.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 왼쪽 화면. 발주서 상품 정보 -->
+        <div class="order-info">
+            <div id="space"></div>
+            <div class="left-text-group">
+                <span class="info-text-left" id="info1"><input class="info-data" id="order-number-data" value="ORD12345"></span>
+                <span class="info-text-right" id="info2"><input class="info-data" id="style-number-data" value="STY98765"></span>
+            </div>
+            <div class="left-text-group">
+                <span class="info-text-left" id="info3"><input class="info-data" id="order-date-data" value=""></span>
+                <span class="info-text-right" id="info4"><input class="info-data" id="delivery-date-data" value=""></span>
+            </div>
+            <div class="left-text-group">
+                <span class="info-text-left" id="info5"><input class="info-data" id="orderer-data" value="정보 없음"></span>
+                <span class="info-text-right" id="info6"><input class="info-data" id="delivery-destination-data" value="xx 발주처"></span>
+            </div>
+
+            <div class="left-bottom">
+                <div class="item-input-group">
+                    <select id="productType">
+                        <option>식품</option>
+                        <option>음료</option>
+                        <option>위생용품</option>
+                        <option>기타</option>
+                        <option selected>새 물품 추가</option>
+                    </select>
+                    <select id="category"><option></option></select>
+                    <select id="productName"><option></option></select>
+                </div>
+    
+                <div class="left-button-group" id="left-group4">
+                    <button class="text-btn" id="add-new-row">항목 추가</span>
+                    <button class="text-btn" id="add-ai-recommendation">AI 추천</span>
+                    <button class="text-btn" id="file-download">파일 다운로드</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="middle"></div>
+
+        <!-- 오른쪽 화면. 발주서 미리보기 -->
+        <div class="right-group">
+            <div class="back_button_container">
+                <button id="home" class="back_button">홈</button>
+                <button id="backPage" class="back_button">←</button>
+            </div>
+
+            <div class="order-exam">
+                <form action="/admin_page/order_page/create_xlsx" method="POST" id="create_xlsx">
+                    <table class="table1">
+                        <caption class="table-caption">발주서 미리보기</caption>
+                        <thead>
+                            <tr class="first-head">
+                                <th width="25%"></th>
+                                <th width="25%"></th>
+                                <th width="25%"></th>
+                                <th width="25%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="info-row">
+                                <td class="info-head">발주 번호</td>
+                                <td class="info-cell"><input class="info-input" type="text" id="order-number" name="info"></td>
+                                <td class="info-head">스타일 번호</td>
+                                <td class="info-cell"><input class="info-input" type="text" id="style-number" name="info"></td>
+                            </tr>
+                            <tr class="info-row">
+                                <td class="info-head">발주일</td>
+                                <td class="info-cell"><input class="info-input" type="text" id="order-date" name="info"></td>
+                                <td class="info-head">납품일</td>
+                                <td class="info-cell"><input class="info-input" type="text" id="delivery-date" name="info"></td>
+                            </tr>
+                            <tr class="info-row">
+                                <td class="info-head">발주처</td>
+                                <td class="info-cell"><input class="info-input" type="text" id="orderer" name="info"></td>
+                                <td class="info-head">납품처</td>
+                                <td class="info-cell"><input class="info-input" type="text" id="delivery-destination" name="info"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table2">
+                        <thead>
+                            <tr class="second-head">
+                                <th width="20%"></th>
+                                <th width="20%"></th>
+                                <th width="20%"></th>
+                                <th width="20%"></th>
+                                <th width="20%"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="item-body">
+                            <tr class="item-row"></tr>
+                                <td class="item-head">상품 코드</td>
+                                <td class="item-head">상품 명</td>
+                                <td class="item-head">수량</td>
+                                <td class="item-head">개당 단가</td>
+                                <td class="item-head">총 금액</td>
+                            </tr>
+
+                            <!-- 아래 행 10개
+                            <tr class="item-row">
+                                <td class="item-cell"><input class="item-code-cell" type="text" name="item-info[]"></td>
+                                <td class="item-cell"><input class="item-name-cell" type="text" name="item-info[]"></td>
+                                <td class="item-cell"><input class="item-quantity-cell" type="text" name="item-info[]"></td>
+                                <td class="item-cell"><input class="item-price-cell" type="text" name="item-info[]"></td>
+                                <td class="item-cell"><input class="item-sum-price-cell" type="text" name="item-info[]"></td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                    <textarea name="remark"></textarea>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const productTypeToCategory  = JSON.parse(`{{ productTypeToCategory | tojson | safe }}`);
+        const categoryToProductName  = JSON.parse(`{{ categoryToProductName | tojson | safe }}`);
+        const productNameToCodeAndPrice  = JSON.parse(`{{ productNameToCodeAndPrice | tojson | safe }}`);
+        const place  = JSON.parse(`{{ place | tojson | safe }}`);
+    </script>
+    <script type="text/javascript" src="/static/js/order_page_def.js"></script>
+    <script type="text/javascript" src="/static/js/order_page.js"></script>
+    <script type="text/javascript" src="/static/js/order_page_event.js"></script>
+</body>
+</html>

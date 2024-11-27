@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xlsx Download</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/xlsx_download.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back_button_container">
+            <button id="home" class="back_button">홈</button>
+            <button id="backPage" class="back_button">←</button>
+        </div>
+        <div class="main-contents">
+            <h1>파일이 생성되었습니다.</h1>
+            <br/>
+            <button id="download" fn="{{ fileName }}">{{ fileName }}<br/>다운로드</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="/static/js/xlsx_download_def.js"></script>
+    <script type="text/javascript" src="/static/js/xlsx_download_event.js"></script>
+</body>
+</html>

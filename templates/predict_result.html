@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Example</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/predict_result.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 상단 배치 -->
+        <div class="row top-row">
+            <!-- 1번 요소: 텍스트 -->
+            <div id="main-text">데이터가 로딩되지 않음</div>
+
+            <!-- 2번 요소: 버튼 5개 -->
+            <div class="button-group-5">
+                <button class="category-select" id="beer-btn">맥주</button>
+                <button class="category-select" id="icecream-btn">아이스크림</button>
+                <button class="category-select" id="soda-btn">탄산음료</button>
+                <button class="category-select" id="umbrella-btn">우산</button>
+                <button class="category-select" id="water-btn">생수</button>
+                <button class="category-select" id="snack-btn">과자</button>
+            </div>
+
+            <!-- 3번 요소: 버튼 2개 -->
+            <div class="button-group-2">
+                <button id="home">홈</button>
+                <button id="backPage">←</button>
+            </div>
+        </div>
+
+        <!-- 중간 배치 -->
+        <div class="row middle-row">
+
+            <!-- 좌측 중앙 배치 -->
+            <div class="left-middle-row">
+                <div class="image-element" id="image-4">
+                    <img id="category-img" src="/static/img/noimage.png">
+                </div>
+
+                <!-- 7번 요소: 텍스트 -->
+                <div class="text-element" id="text-7">
+                    <span id="day-predict">데이터가 로딩되지 않음</span>
+                    <br/>
+                    <div id="day-predict-percent">
+                        <span id="span-text1"> </span>
+                        <span id="span-text2"> </span>
+                        <span id="span-text3"> </span>
+                    </div>
+                </div>
+
+                <!-- 8번 요소: 버튼 그룹 -->
+                <div class="day-button-element" id="button-8">
+                    <div >
+                        <button class="day-button-clicked" id="day-button1">오늘</button>
+                        <button class="day-button" id="day-button2">1일 후</button>
+                        <button class="day-button" id="day-button3">2일 후</button>
+                        <button class="day-button" id="day-button4">3일 후</button>
+                    </div>
+                    <div>
+                        <button class="day-button" id="day-button5">4일 후</button>
+                        <button class="day-button" id="day-button6">5일 후</button>
+                        <button class="day-button" id="day-button7">6일 후</button>
+                        <button class="day-button" id="day-button8">7일 후</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 정중앙 배치 -->
+            <!-- 5번 요소: 이미지 -->
+            <div class="image-element" id="image-5">
+                <canvas id="myChart" width="466" height="443"></canvas>
+            </div>
+            
+            <!-- 우측 중앙 배치 -->
+            <div class="right-middle-row">
+
+                <!-- 오늘 날씨 정보 텍스트 -->
+                <div class="text-element" id="text-6">
+                    <span id="today-weather">날씨 정보가 로딩 되지 않았습니다.</span>
+                </div>
+
+                <!-- 6번 요소: 이미지 -->
+                <div class="image-element" id="image-6">
+                    <div class="pair-left">
+                        <div class="pair" id="pair-top1">
+                            <img src="/static/img/temperature.png" alt="이미지 1">
+                            <span id="temperature-data">데이터 없음</span>
+                        </div>
+                        <div class="pair">
+                            <img src="/static/img/windspeed.png" alt="이미지 2">
+                            <span id="windspeed-data">데이터 없음</span>
+                        </div>
+                    </div>
+                    <div class="pair-right">
+                        <div class="pair" id="pair-top2">
+                            <img src="/static/img/humidity.png" alt="이미지 3">
+                            <span id="humidity-data">데이터 없음</span>
+                        </div>
+                        <div class="pair">
+                            <img src="/static/img/precipitation.png" alt="이미지 4">
+                            <span id="precipitation-data">데이터 없음</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 9번 요소: 텍스트 -->
+                <div class="text-element" id="text-9">
+                    <span id="inventory-quantity"><button id="inventory-quantity-btn" class="data-text-btn">현재 재고 수량</button></span>
+                    <span id="demand-forecasting"><button id="demand-forecasting-btn" class="data-text-btn">7일간 예상 수요량</button></span>
+                    <span id="required-number"><button id="required-number-btn" class="data-text-btn">추가 필요 수량</button></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <script>
+        const categoryName = JSON.parse(`{{ categoryName | tojson | safe }}`);
+        const categoryQuantity = JSON.parse(`{{ categoryQuantity | tojson | safe }}`);
+        const imgPath = JSON.parse(`{{ imgPath | tojson | safe }}`);
+        const weatherTextData = JSON.parse(`{{ weatherTextData | tojson | safe }}`);
+        const weatherNumberData = JSON.parse(`{{ weatherNumberData | tojson | safe }}`);
+        const yesterdaySalesRate = JSON.parse(`{{ yesterdaySalesRate | tojson | safe }}`);
+        const predictData = JSON.parse(`{{ predictData | tojson | safe }}`);
+    </script>
+    <script type="text/javascript" src="/static/js/predict_result_def.js"></script>
+    <script type="text/javascript" src="/static/js/predict_result.js"></script>
+    <script type="text/javascript" src="/static/js/predict_result_event.js"></script>
+</body>
+</html>

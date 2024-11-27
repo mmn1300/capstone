@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Management</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/member_management.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back_button_container">
+            <button id="home" class="back_button">홈</button>
+        </div>
+        <div class="query_result">
+            <h1>회원 정보</h1>
+            <div class="member-info">
+                <span>레벨</span>
+                <span>유저 코드</span>
+                <span>아이디</span>
+                <span>닉네임</span>
+                <span class="text">지점명</span>
+            </div>
+            <div class="member-data-container">
+                <!-- 아래 행 회원 수 만큼 생성  -->
+                <!-- <div class="member-data">
+                    <span><button class="member-delete">x</button></span>
+                    <span><input class="level" id="level" type="text" value=""></span>
+                    <span><input class="code" id="code" type="text" value=""></span>
+                    <span><input class="id" id="id" type="text" value=""></span>
+                    <span><input class="name" id="name" type="text" value=""></span>
+                    <span><input class="place" id="place" type="text" value=""></span>
+                </div> -->
+            </div>
+            <div class="page-container">
+                <button class="page-button" id="previous-page-btn">&lt;</button>
+                <input id="page-number" type="number" value="1">
+                <button class="page-button" id="next-page-btn">&gt;</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const queryData = JSON.parse(`{{ rows | tojson | safe }}`);
+    </script>
+    <script type="text/javascript" src="/static/js/member_management_def.js"></script>
+    <script type="text/javascript" src="/static/js/member_management.js"></script>
+    <script type="text/javascript" src="/static/js/member_management_event.js"></script>
+</body>
+</html>

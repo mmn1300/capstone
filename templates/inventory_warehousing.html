@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Warehousing</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/inventory_warehousing.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back_button_container">
+            <button id="home" class="back_button">홈</button>
+            <button id="backPage" class="back_button">←</button>
+        </div>
+
+        <div class="row-container">
+            <div class="row">
+                <span class="cell">상품 명</span>
+                <span class="cell">수량 추가</span>
+            </div>
+            <hr/>
+
+            <form id="inputForm" method="POST" action="/admin_page/inventory_info/inventory_warehousing/db_insert">
+                <div id="input-container">
+                    <!-- 추가 버튼을 누를시 아래와 유사한 요소들이 생성됨
+                    <div class="input-row-add">
+                        <select name="texts" class="select">
+                            <option value="과자">과자</option>
+                            <option value="라면">라면</option>
+                            <option value="마스크">마스크</option>
+                            <option value="맥주">맥주</option>
+                            <option value="면도기">면도기</option>
+                            <option value="생리대">생리대</option>
+                            <option value="생수">생수</option>
+                            <option value="숙취해소제">숙취해소제</option>
+                            <option value="스타킹">스타킹</option>
+                            <option value="아이스크림">아이스크림</option>
+                            <option value="우산">우산</option>
+                            <option value="탄산음료">탄산음료</option>
+                        </select>
+                        <input type="text" name="texts2" class="text2">
+                        <input type="number" name="numbers" class="input">
+                        <button type="button" class="increment">+</button>
+                        <button type="button" class="decrement">-</button>
+                    </div> -->
+                </div>
+                <br/>
+                <div id="button-container">
+                    <button type="button" id="addRow">추가</button>
+                    <button type="button" id="submitData">등록</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="item-name-list">
+            <div class="row2">
+                <span class="cell2">재고 목록</span>
+            </div>
+            <hr/>
+            <div class="btn-group">
+                <button class="category-btn" id="food-btn">식품</button>
+                <button class="category-btn" id="drink-btn">음료</button>
+                <button class="category-btn" id="sanitary-products-btn">위생용품</button>
+                <button class="category-btn" id="etc-btn">기타</button>
+            </div>
+            <hr/>
+            <div class="item-list">
+            </div>
+            <div class="page-info">
+                <button class="page-button" id="previous-page-btn">&lt;</button>
+                <input id="page-number" type="number" value="1">
+                <button class="page-button" id="next-page-btn">&gt;</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const inventoryData = JSON.parse(`{{ rows | tojson | safe }}`);
+    </script>
+    <script type="text/javascript" src="/static/js/inventory_warehousing_def.js"></script>
+    <script type="text/javascript" src="/static/js/inventory_warehousing_event.js"></script>
+    <script type="text/javascript" src="/static/js/inventory_warehousing.js"></script>
+</body>
+</html>
+

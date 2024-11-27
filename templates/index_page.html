@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/index_page.css">
+    <title>User Select</title>
+</head>
+<body>
+    <div class="container">
+        <div class="user-info-container">
+            <span id="login-info">로그인되지 않음</span>
+            <button type="button" id="login" class="login-btn">로그인</button>
+        </div>
+        <div class="button-container">
+            <button id="userButton" class="button">판매 메뉴</button>
+            <button id="adminButton" class="button">관리 메뉴</button>
+        </div>
+    </div>
+    <script>
+        const username = JSON.parse(`{{ username | tojson | safe }}`);
+        const place = JSON.parse(`{{ place | tojson | safe }}`);
+    </script>
+    <script type="text/javascript" src="/static/js/index_page.js"></script>
+    <script type="text/javascript" src="/static/js/index_page_event.js"></script>
+</body>
+</html>
