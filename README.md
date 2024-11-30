@@ -21,10 +21,22 @@
      ![로그인](https://github.com/mmn1300/capstone/blob/main/img6.png)
      ![회원가입](https://github.com/mmn1300/capstone/blob/main/img7.png)
   2. 회원 관리
+    ![회원관리](https://github.com/mmn1300/capstone/blob/main/img9.png)
 
 ---
 
 ## 설치 방법
+  본 프로젝트를 로컬 환경에서 동작하려면 mySQL, pytorch를 필수적으로 설치해야합니다.
+  
+  설치에 필요한 install 명령어는 다음과 같습니다.
+
+  ---
+
+  ---
+
+  서버는 flask와 fastapi 두가지를 구축하였으니 원하는 프레임워크를 install하여 사용하시면 됩니다.
+
+  성능이 좋지 않은 호스트에서 fastapi서버가 원할하게 동작함을 확인하였으니 참고 바랍니다.
 
 ---
 
