@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e7f5f8;
+    font-size: medium;
+    font-weight: bolder;
+}
+button{
+    cursor: pointer; /* 커서 모양 변경 */
+    font-weight: bolder;
+}
+input{
+    border-width: 0;
+}
+input:focus {
+    outline: none;
+}
+.container {
+    position: relative; /* 부모 요소에 relative 포지션을 설정 */
+    height: 100vh; /* 부모 요소의 높이를 100%로 설정 (전체 화면) */
+    width: 1500px;
+    max-width: 1500px;
+    height: 680px;
+    border: 4px solid black;
+    background-color: #fff;
+}
+.back_button_container{
+    position: absolute; /* 버튼 컨테이너에 absolute 포지션을 설정 */
+    left: 93%;
+    top: 5%;
+    transform: translate(-50%, -50%); /* 요소를 자신의 너비의 절반과 높이의 절반 만큼 이동 */
+    display: flex; /* 버튼을 가로로 배치하기 위해 flex 사용 */
+    gap: 10px; /* 버튼 간의 간격 설정 (원하는 값으로 조정 가능) */
+}
+.back_button{
+    border-radius: 5px; /* 버튼 모서리 둥글게 */
+    width: 5rem;
+    height: 3rem;
+    padding: 10px 20px; /* 버튼 내부 여백 */
+    font-size: larger; /* 글자 크기 */
+    cursor: pointer; /* 커서 모양 변경 */
+}
+#space{
+    width: 100%;
+    height: 27px;
+}
+.order-info{
+    width: 460px;
+    height: 100%;
+    position: absolute; /* 버튼 컨테이너에 absolute 포지션을 설정 */
+    left: 20px;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.middle{
+    position: absolute;
+    height: 100%;
+    left: 490px;
+    border: 2px solid;
+}
+.order-exam{
+    position: absolute; /* 버튼 컨테이너에 absolute 포지션을 설정 */
+    right: 10px;
+    transform: translateX(-50%);
+    top: 55%;
+    transform: translateY(-50%);
+}
+.left-text-group{
+    height: 60px;
+    text-align: center;
+}
+.left-text-group>span{
+    height: 32px;
+    width: 42%;
+}
+.info-text-left{
+    position: absolute;
+    left: 5%;
+    border: 2px solid;
+}
+.left-bottom{
+    border: 2px solid black;
+    height: 455px;
+}
+.info-text-right{
+    position: absolute;
+    right: 5%;
+    border: 2px solid;
+}
+.item-input-group{
+    height: 404px;
+    text-align: center;
+}
+select{
+    width: 120px;
+    height: 26px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: medium;
+    margin: 10px;
+}
+.left-button-group{
+    height: 60px;
+    text-align: center; 
+    margin-top: -11px;
+}
+#left-group4>button{
+    width: 33%;
+    height: 100%;
+    font-size: larger;
+}
+table{
+    width: 987px;
+    border: 2px solid;
+    text-align: center;
+}
+caption{
+    font-size: larger;
+    margin-bottom: 12px;
+}
+td{
+    border: 2px solid;
+}
+.info-input{
+    width: 250px;
+    height: 30px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: medium;
+}
+.item-code-cell, .item-name-cell, .item-quantity-cell, .item-price-cell, .item-sum-price-cell{
+    width: 184px;
+    text-align: center;
+}
+textarea{
+    border: 2px solid;
+    width: 980px;
+    height: 118px;
+    font-size: 20px;
+}
+textarea:focus {
+    outline: none;
+}
+.info-head{
+    background-color: #DCEBFF;
+}
+.item-head{
+    background-color: #D2D2FF;
+}
+.input-item-name, .input-item-quantity{
+    border: 2px solid;
+    text-align: center;
+    width: 100px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.item-input-group button{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 4px;
+}
+.info-data{
+    width: 185px;
+    height: 28px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: larger;
+}

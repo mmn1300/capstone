@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e7f5f8;
+}
+.container{
+    position: relative; /* 부모 요소에 relative 포지션을 설정 */
+    height: 100vh; /* 부모 요소의 높이를 100%로 설정 (전체 화면) */
+    width: 95%;
+    max-width: 1500px;
+    height: 700px;
+    border: 2px solid black;
+    background-color: #fff;
+}
+.back_button_container{
+    position: absolute; /* 버튼 컨테이너에 absolute 포지션을 설정 */
+    left: 93%;
+    top: 4.5%;
+    transform: translate(-50%, -50%); /* 요소를 자신의 너비의 절반과 높이의 절반 만큼 이동 */
+    display: flex; /* 버튼을 가로로 배치하기 위해 flex 사용 */
+    gap: 10px; /* 버튼 간의 간격 설정 (원하는 값으로 조정 가능) */
+}
+button{
+    border-radius: 5px; /* 버튼 모서리 둥글게 */
+    cursor: pointer; /* 커서 모양 변경 */
+    font-weight: bolder;
+}
+.back_button{
+    width: 5rem;
+    height: 3rem;
+    padding: 10px 20px; /* 버튼 내부 여백 */
+    font-size: 16px; /* 글자 크기 */
+    cursor: pointer; /* 커서 모양 변경 */
+}
+.query_result{
+    border: 2px solid black;
+    position: absolute; /* 버튼 컨테이너에 absolute 포지션을 설정 */
+    left: 18%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 980px;
+    height: 630px;
+    text-align: center;
+}
+.button-container{
+    width: 100%;
+    height: 48px;
+    display: flex; /* flexbox 사용 */
+    justify-content: flex-start; /* 아이템들을 왼쪽으로 정렬 */
+}
+h1{
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.category-btn{   
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 12px;
+    margin-right: 12px;
+    width: 128px;
+    height: 32px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: medium;
+    background-color: #eee;
+}
+.category-btn-clicked{   
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 12px;
+    margin-right: 12px;
+    width: 128px;
+    height: 32px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: medium;
+    background-color: #b5b5b5;
+}
+.row {
+    margin-bottom: 16px;
+}
+.cell {
+    display: inline-block;
+    width: 150px;
+    margin-left: 6px;
+    font-weight: bolder;
+}
+.cell-last{
+    display: inline-block;
+    width: 150px;
+    margin-right: 30px;
+    font-weight: bolder;
+}
+.info-row{
+    margin-top: -6px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px black solid;
+}
+
+#quantity {
+    text-align: end;
+    width: 70px;
+    height: 16px;
+}
+
+#price {
+    text-align: end;
+    width: 70px;
+    height: 16px;
+}
+
+#code{
+    text-align: start;
+    width: 40px;
+    height: 16px;
+}
+
+.update-item {
+    position: absolute; /* 버튼 컨테이너에 absolute 포지션을 설정 */
+    left: 1020px;
+    top: 500px;
+    width: 150px;
+    height: 100px;
+}
+
+.update-item-button{
+    width: 100%;
+    height: 100%;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.page-info{
+    position: absolute;
+    bottom: 2.5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#page-number{
+    text-align:center;
+    font-weight: bolder;
+    width: 48px;
+    height: 28px;
+}
+
+.page-button{
+    width: 32px;
+    height: 32px;
+}
+
+.code-cell{
+    display: inline-block;
+    width: 70px;
+}
+#code-cell-head{
+    font-weight: bolder;
+}
+.icon-cell{
+    display: inline-block;
+    width: 48px;
+}
+
+.icon-cell-body {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.icon-img{
+    margin-bottom: -4px;
+}
+
+.category-button-container{
+    width: 85%;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+}
+
+.predict-button-container{
+    width: 15%;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+    border-left: 1px black solid;
+}
+
+.predict-btn{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 48px;
+    height: 32px;
+    background-color: #eee;
+}
+
+.predict-btn-clicked{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 48px;
+    height: 32px;
+    background-color: #b5b5b5;
+}
+
+#predict-btn-left{
+    margin-left: 16px;
+    margin-right: 2px;
+}
+
+#predict-btn-right{
+    margin-left: 2px;
+    margin-right: 16px;
+}
+
+.cell-body {
+    margin-left: 10px;
+    display: inline-block;
+    width: 150px;
+}
+.cell-body-last {
+    display: inline-block;
+    width: 150px;
+}
+
+.cell-body-span{
+    margin-left: 10px;
+    display: inline-block;
+    width: 150px;
+    padding-bottom: 2px;
+}

@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e7f5f8;
+    font-size: medium;
+    font-weight: bolder;
+}
+.container {
+    position: relative; /* 부모 요소에 relative 포지션을 설정 */
+    height: 100vh; /* 부모 요소의 높이를 100%로 설정 (전체 화면) */
+    width: 1200px;
+    max-width: 1200px;
+    height: 650px;
+    border: 4px solid black;
+    background-color: #fff;
+}
+.back_button_container{
+    position: absolute; /* 버튼 컨테이너에 absolute 포지션을 설정 */
+    left: 88%;
+    top: 8%;
+    transform: translate(-50%, -50%); /* 요소를 자신의 너비의 절반과 높이의 절반 만큼 이동 */
+    display: flex; /* 버튼을 가로로 배치하기 위해 flex 사용 */
+    gap: 10px; /* 버튼 간의 간격 설정 (원하는 값으로 조정 가능) */
+}
+.back_button{
+    border-radius: 5px; /* 버튼 모서리 둥글게 */
+    width: 5rem;
+    height: 3rem;
+    padding: 10px 20px; /* 버튼 내부 여백 */
+    font-size: larger; /* 글자 크기 */
+    cursor: pointer; /* 커서 모양 변경 */
+}
+button{
+    cursor: pointer; /* 커서 모양 변경 */
+    font-weight: bolder;
+}
+.main-contents{
+    position: absolute; /* 버튼 컨테이너에 absolute 포지션을 설정 */
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#download{
+    margin-top: 30px;
+    width: 400px;
+    height: 56px;
+    font-size: larger;
+}

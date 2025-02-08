@@ -1,0 +1,160 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e7f5f8;
+}
+.container {
+    position: relative; /* 부모 요소에 relative 포지션을 설정 */
+    height: 100vh; /* 부모 요소의 높이를 100%로 설정 (전체 화면) */
+    border: 2px solid black;
+    width: 90%;
+    max-width: 1500px;
+    height: 95%;
+    background-color: #fff;
+}
+button{
+    border-radius: 5px; /* 버튼 모서리 둥글게 */
+    cursor: pointer; /* 커서 모양 변경 */
+    font-weight: bolder;
+}
+.back_button_container{
+    position: absolute; /* 버튼 컨테이너에 absolute 포지션을 설정 */
+    left: 90%;
+    top: 5%;
+    transform: translate(-50%, -50%); /* 요소를 자신의 너비의 절반과 높이의 절반 만큼 이동 */
+    display: flex; /* 버튼을 가로로 배치하기 위해 flex 사용 */
+    gap: 10px; /* 버튼 간의 간격 설정 (원하는 값으로 조정 가능) */
+}
+.back_button{
+    width: 5rem;
+    height: 3rem;
+    padding: 10px 20px; /* 버튼 내부 여백 */
+    font-size: 16px; /* 글자 크기 */
+    cursor: pointer; /* 커서 모양 변경 */
+}
+.row-container{
+    border: 2px solid black;
+    position: absolute; /* 버튼 컨테이너에 absolute 포지션을 설정 */
+    left: 8%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 480px;
+    height: 592px;
+    text-align: center;
+}
+.row{
+    height: 3rem;
+}
+.cell{
+    font-weight: bolder;
+    font-size: 2.5rem;
+    margin: 0 2rem;
+}
+select{
+    width: 90px;
+    height: 32px;
+    font-weight: bolder;
+}
+input{
+    width: 7rem;
+    height: 1.6rem;
+    font-weight: bolder;
+}
+#input-container button{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 4px;
+}
+.input-row-add>select,input{
+    margin: 4px;
+}
+#button-container{
+    text-align: end;
+}
+#button-container>*{
+    width: 5rem;
+    height: 2rem;
+    margin: 0 0.5rem;
+    font-size: medium;
+}
+
+.item-name-list{
+    position: absolute;
+    right: 8%;
+    transform: translateX(-50%);
+    top: 53%;
+    transform: translateY(-50%);
+    border: 2px solid black;
+    width: 550px;
+    height: 550px;
+}
+.row2{
+    text-align: center;
+}
+.cell2{
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+.btn-group{
+    text-align: center;
+}
+.category-btn{
+    width: 100px;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: medium;
+    background-color: #eee;
+}
+.category-btn-clicked{
+    width: 100px;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: medium;
+    background-color: #b7b7b7;
+}
+
+.inventory-list{
+    text-align: center;
+    position: relative;
+}
+.inventory-list>*{
+    text-align: center;
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: medium;
+    font-weight: bolder;
+}
+.left-span{
+    position: absolute;
+    left: 10%;
+}
+.middle-span{
+    position: absolute;
+    left: 40%;
+    transform: translateX(-50%);
+}
+.right-btn{
+    margin-left: 350px;
+    width: 160px;
+}
+
+.page-info{
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#page-number{
+    text-align:center;
+    font-weight: bolder;
+    width: 48px;
+    height: 28px;
+}
+.page-button{
+    width: 32px;
+    height: 32px;
+}

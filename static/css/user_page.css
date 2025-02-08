@@ -1,0 +1,198 @@
+/* 기본 리셋 및 레이아웃 설정 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e7f5f8;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1500px;
+    height: 95%;
+    border: 2px solid black;
+    background-color: #fff;
+}
+
+.left, .center, .right {
+    padding: 20px;
+}
+
+.left {
+    width: 30%;
+    border-right: 2px solid black;
+    text-align: center;
+}
+
+.left-bottom {
+    margin-top: 10%;
+}
+
+.left-bottom-element {
+    height: 48px;
+    border: 2px solid black;
+    margin : 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-bottom-span {
+    font-weight: bolder;
+    font-size: large;
+}
+
+.left-bottom-button {
+    width: 100%;
+    height: 100%;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.image-space {
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 2px solid black;
+}
+
+.image-space img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.text-space {
+    border: 2px solid white;
+    height: 230px;
+    text-align: center;
+}
+
+.center {
+    width: 40%;
+    border-right: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.input-label {
+    margin-bottom: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+#input-group {
+    margin-bottom: 20px;
+}
+
+#input-group input {
+    margin-left: 10px;
+    margin-right: 20px;
+    padding: 5px;
+    width: 100px;
+}
+
+#input-group button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.item-row-add{
+    display: flex; /* 추가적인 스타일로 확인 */
+}
+
+.item-name {
+    margin-left: 40px;
+    margin-right: 10px;
+    width:100px;
+    line-height: 16px; /* 텍스트를 세로로 중앙 정렬 */
+    overflow: hidden; /* 텍스트가 크기를 넘어설 경우 숨기기 */
+    padding: 5px;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.result-price{
+    text-align: end;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 90px;
+
+    line-height: 16px; /* 텍스트를 세로로 중앙 정렬 */
+    overflow: hidden; /* 텍스트가 크기를 넘어설 경우 숨기기 */
+    padding: 5px;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+
+
+.right {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%; /* 부모 요소의 전체 높이를 차지하도록 설정 */
+}
+
+.back_button_container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 116px;
+    display: flex;
+    gap: 16px;
+    border: 2px solid black;
+    padding: 8px;
+    justify-content: space-between;
+}
+
+.right-top {
+    display: flex;
+    align-items: center; /* 수직 정렬: 중앙 */
+    justify-content: center; /* 수평 정렬: 중앙 */
+    height: 300px; /* 원하는 세로 길이로 조정 */
+    padding-top: 50px; /* 버튼이 top 영역에 가려지지 않도록 패딩 추가 */
+}
+
+#video {
+    width: 100%;
+    height: auto; /* 비율에 맞게 높이 자동 조정 */
+}
+
+
+.right-bottom {
+    flex: 1;
+    margin-top: 5%;
+}
+
+.right-bottom-element {
+    height: 64px;
+    border: 2px solid black;
+    margin : 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-bottom-button{
+    width: 100%;
+    height: 100%;
+}
+
+.right-bottom-element>*{
+    font-weight: bolder;
+    font-size: large;
+}
+
