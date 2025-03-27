@@ -18,7 +18,7 @@
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>&nbsp
   <img src="https://img.shields.io/badge/CSS-663399?style=flat-square&logo=CSS&logoColor=white"/>&nbsp
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>&nbsp
-  <img src="https://img.shields.io/badge/ChartJS-FF6384?style=flat-square&logo=ChartJS&logoColor=white"/>&nbsp
+  <img src="https://img.shields.io/badge/ChartJS-FF6384?style=flat-square&logo=ChartdotJS&logoColor=white"/>&nbsp
   <img src="https://img.shields.io/badge/VScode-000000?style=flat-square"/>&nbsp
   <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white"/>&nbsp
   <img src="https://img.shields.io/badge/Anaconda-44A833?style=flat-square&logo=Anaconda&logoColor=white"/>&nbsp
